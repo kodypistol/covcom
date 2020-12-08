@@ -7,3 +7,6 @@ body {
   color: $bodyColor;
   font-family: $bodyFont;
 }
+
+@import 'common/mainDivs';
+@import 'common/fonts.scss';
