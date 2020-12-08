@@ -1,6 +1,6 @@
 #titleDiv {
     background-color: $bleu;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     border-radius: 35px 35px 0px 0px;
     #titre {
@@ -14,7 +14,7 @@
 #contentDiv {
     background-color: $blanc;
     width: 100%;
-    height: calc(100% - 75px);
+    min-height: calc(100% - 75px);
     bottom: 0px;
     position: absolute;
     border-radius: 35px 35px 0px 0px;
