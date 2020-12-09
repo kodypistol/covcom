@@ -1,0 +1,45 @@
+$tagRechercheW: 50px;
+$tagRechercheH: 25px;
+
+#searchArea {
+    position: relative;
+    P {
+        font-family: Goldplay-Alt-Regular;
+        color: $blanc;
+        font-size: 25px;
+        text-align: center;
+        margin: 10px 30px 10px 30px;
+    }
+    input {
+        background-color: $blanc;
+        border: none;
+        border-radius: 20px;
+        position: relative;
+        left: 50%;
+        width: 80%;
+        height: 30px;
+        transform: translateX(-50%);
+        &::placeholder{
+            color: $bleu;
+            opacity: 0.5;
+            font-family: Goldplay-Alt-Bold;
+            font-size: 80%;
+        }
+    }
+    #tagsRecherche {
+        overflow-x: scroll;
+        width: 100vw;
+        white-space: nowrap;
+    }
+}
+
+.tagRecherche {
+    margin: 10px 10px 10px 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: $bleu;
+    color: $blanc;
+    min-width: $tagRechercheW;
+    height: $tagRechercheH;
+    box-shadow: $tagRechercheW/10 $tagRechercheH/10 ($tagRechercheW/5 + $tagRechercheH/5)/2 #00102b, $tagRechercheW/10*-1 $tagRechercheH/10*-1 ($tagRechercheW/5 + $tagRechercheH/5)/2 #0042ab;
+}

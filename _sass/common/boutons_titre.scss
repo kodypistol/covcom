@@ -3,6 +3,7 @@ $boutonTitreDecalage: 25px;
 $iconeTitreTaille: 50%;
 
 .bouton_titre {
+    border: none;
     background-color: $blanc;
     border-radius: 50%;
     width: $boutonTitreTaille;

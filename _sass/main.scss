@@ -3,9 +3,11 @@ body {
 }
 
 @import 'common/colors';
+@import 'common/fonts';
 @import 'common/mainDivs';
 @import 'common/cartemobile';
-@import 'common/fonts';
+
 
 @import 'common/boutons_titre';
-@import 'common/footer'
+@import 'common/zone_recherche';
+@import'common/footer';
