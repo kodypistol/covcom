@@ -33,3 +33,7 @@ $titleBarHeight: 75px;
     position: absolute;
     border-radius: 35px 35px 0px 0px;
 }
+
+#contentDiv.down {
+    height: calc( 80% - #{$titleBarHeight});
+ }
