@@ -1,26 +1,18 @@
-  #openclose{
-    width: 1em;
-    height: 1em;
-    top: 80%;
-    margin-left: 55%;
-    margin-top: 16%;
-    background-color: $vert;
-    border-radius: 50%;
-  }
+$transition: all 0.25s ease-in-out;
 
-  .ouvert{
-    font-family: Goldplay-Alt-Regular;
-    font-size: 12px;
-    color: $bleu;
-    margin-left: 61%;
-    margin-top: -4%;
-    }
+.descphoto1{
+
+   display: flex;
+   justify-content: space-between;
+
+}
 
   .conteneurimage{
         position: absolute;
         background-color: blue;
-        width: 10em;
-        height: 13em;
+        width: 50%;
+        height: 30%;
+        //height: 13em;
         box-shadow: -3px -3px 8px 1px #FFFFFF, 3px 3px 11px 1px rgba(174, 174, 192, 0.4);
         border-radius: 19px;
         top: 10%;
@@ -38,21 +30,71 @@
         }
   }
    
+  .conteneurtexte{
+    
+    width: 40%;
+    height: 50%;
+
+    #openclose{
+      width: 1em;
+      height: 1em;
+      top: 80%;
+      //margin-left: 55%;
+     // margin-top: 16%;
+      background-color: $vert;
+      border-radius: 50%;
+    }
+  
+    .ouvert{
+      font-family: Goldplay-Alt-Regular;
+      font-size: 12px;
+      color: $bleu;
+     // margin-left: 61%;
+    //  margin-top: -4%;
+      }
+
+
     .descriptionStore{
         color: $bleu;
         font-family: Goldplay-Alt-Regular;
         font-size: 12px;
         margin-left: 55%;
-        margin-right: 5%;
-        margin-top: -1%;
+      //  margin-right: 2%;
+       // margin-top: -1%;
     }
 
     h3{
         font-family: Goldplay-Alt-Bold;
         font-size: 14px;
         color: $bleu;
-        margin-left: 55%;
-        margin-right: 5%;
-        margin-top: -2%;
+      //  margin-left: 55%;
+       // margin-right: 5%;
+      //  margin-top: -2%;
 
     }
+  }
+
+    .decouvrir{
+      background: #F0F0F3;
+      background-size: 30%;
+      height: 30px;
+      width: 100px;
+      box-shadow: -3px -3px 8px 1px #FFFFFF, 3px 3px 11px 1px rgba(174, 174, 192, 0.4);
+      border-radius: 12px;
+      margin-left: 50%;
+      transition: $transition;
+      &:focus, &:active{
+      transform: scale(1,5);
+    
+        }
+        .texte{
+          margin-top: 4vh;
+          transform: translateY(30%);
+          font-family: Goldplay-Alt-Bold;
+          font-size: 14px;
+          color: $bleu;
+          text-align: center;
+        }
+}
+    
+  
