@@ -1,0 +1,34 @@
+$boutonTitreTaille: 40px;
+$boutonTitreDecalage: 25px;
+$iconeTitreTaille: 50%;
+
+.bouton_titre {
+    background-color: $blanc;
+    border-radius: 50%;
+    width: $boutonTitreTaille;
+    height: $boutonTitreTaille;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow:  4px 4px 8px #00102b, -4px -4px 8px #0042ab;
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+#bouton_recherche {
+    left: $boutonTitreDecalage;
+    img {
+        width: $iconeTitreTaille;
+    }
+}
+
+#bouton_plus {
+    right: $boutonTitreDecalage;
+    img {
+        width: $iconeTitreTaille * 1.6;
+    }
+}

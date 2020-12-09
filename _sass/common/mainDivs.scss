@@ -1,20 +1,33 @@
-#titleDiv {
+$titleBarHeight: 75px;
+
+#backgroundDiv {
     background-color: $bleu;
     min-height: 100vh;
     width: 100vw;
     border-radius: 35px 35px 0px 0px;
-    #titre {
-        font-family: Goldplay-Alt-Bold;
-        color: $blanc;
-        margin: 0px 0px 0px 0px;
-    }
     position: relative;
+}
+
+#titleDiv {
+    height: $titleBarHeight;
+    width: 100%;
+    position: relative;
+}
+
+#titre {
+    font-family: Goldplay-Alt-Bold;
+    color: $blanc;
+    margin: 0px 0px 0px 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #contentDiv {
     background-color: $blanc;
     width: 100%;
-    height: calc(100% - 75px);
+    height: calc(100% - #{$titleBarHeight});
     overflow-y: scroll;
     bottom: 0px;
     position: absolute;
