@@ -36,6 +36,9 @@ $titleBarHeight: 75px;
     border-radius: 35px 35px 0px 0px;
 }
 
-#searchDiv.down {
-    height: calc(80% - #{$titleBarHeight});
- }
+#searchDiv {
+    transition: height 1s;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}

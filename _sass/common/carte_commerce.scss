@@ -1,0 +1,88 @@
+$taille_pastille: 10px;
+
+.carte_commerce {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0px 20px 0px;
+}
+
+.photo_commerce {
+    width: 40%;
+    height: 210px;
+    border-radius: 20px;
+    background-image: url("../photos/first.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.data_commerce {
+    width: 55%;
+    color: $bleu;
+    position: relative;
+}
+
+.titre_commerce {
+    font-family: Goldplay-Alt-Bold;
+    margin-bottom: 0px;
+}
+
+.label_pastille, .desc_commerce {
+    font-family: Goldplay-Alt-Regular;
+}
+
+.desc_commerce {
+    margin-top: 5px;
+    font-size: 1.5vh;
+}
+
+.label_pastille {
+    font-size: 1.5vh;
+}
+
+.pastille {
+    width: $taille_pastille;
+    height: $taille_pastille;
+    border-radius: 50%;
+    background-color: $vert;
+    display: inline-block;
+}
+
+.bouton_decouvrir {
+    border: none;
+    border-radius: 50px;
+    background-color: $blanc;
+    color: $bleu;
+    font-family: Goldplay-Alt-Bold;
+    height: 50px;
+    width: 40vw;
+    font-size: 2.5vh;
+    box-shadow:  5px 5px 10px #cccccf, -5px -5px 10px #ffffff;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.separateur_carte {
+    height: 10px;
+    width: 100%;
+    box-shadow: inset 1px 1px 2px #cccccf, inset -1px -1px 2px #ffffff;
+    border-radius: 50px;
+}
+
+.tags_carte {
+    position: relative;
+    float: right;
+    margin-bottom: 10px;
+}
+
+.tags_carte td {
+    background-color: $jaune;
+    color: $bleu;
+    border-radius: 50px;
+    font-size: 10px;
+    text-align: center;
+    font-family: Goldplay-Alt-Regular;
+    padding: 0.5em 1em 0.5em 1em;
+}
