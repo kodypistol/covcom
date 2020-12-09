@@ -1,10 +1,12 @@
-const btnr = document.querySelector('.btnrech')
+const btnr = document.querySelector('.btnrech');
 
+btnr.addEventListener('click', function (event){
+    
+    if( $("#formDiv").hasClass("show") ){
+        $("#formDiv").removeClass("show");
+    }else{
+        const panel = document.querySelector('#searchDiv');
+        panel.classList.add('down');
+    }
 
-    btnr.addEventListener('click', function (event){
-        
-        const panel = document.querySelector('#searchDiv')
-        console.log('click')
-            panel.classList.add('down')
-
-    })
+})

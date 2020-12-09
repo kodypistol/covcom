@@ -38,7 +38,12 @@ $titleBarHeight: 75px;
 
 #formDiv {
     left: 100vw;
+    transition: left 1s;
+    &.show {
+        left: 0vw;
+    }
 }
+
 #searchDiv.down {
-    height: calc( 80% - #{$titleBarHeight});
+    height: calc(80% - #{$titleBarHeight});
  }
