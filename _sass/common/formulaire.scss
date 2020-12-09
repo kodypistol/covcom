@@ -1,0 +1,50 @@
+.txtBleu {
+    color: $bleu;
+}
+
+.txtCenter {
+    text-align: center;
+}
+
+.txtBold {
+    font-family: Goldplay-Alt-Bold;
+}
+
+.txtLight {
+    font-family: Goldplay-Alt-Light;
+}
+
+.colSpace {
+    height: 30px;
+}
+
+#formDiv {
+    left: 100vw;
+    transition: left 1s;
+    box-sizing: border-box;
+    padding-left: 25px;
+    padding-right: 25px;
+    &.show {
+        left: 0vw;
+    }
+}
+
+.inputDiv {
+    label {
+        color: $bleu;
+        font-family: Goldplay-Alt-Bold;
+    }
+    input {
+        border: none;
+        border-radius: 20px;
+        width: 100%;
+        height: 50px;
+        background-color: #F0F0F3;
+        box-shadow: inset 5px 5px 10px #cccccf, inset -5px -5px 10px #ffffff;
+    }
+}
+
+#champsObligatoires {
+    font-size: 12px;
+    text-align: center;
+}
