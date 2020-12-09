@@ -2,8 +2,9 @@ $titleBarHeight: 75px;
 
 #backgroundDiv {
     background-color: $bleu;
-    min-height: 100vh;
+    height: 100vh;
     width: 100vw;
+    overflow-x: hidden;
     border-radius: 35px 35px 0px 0px;
     position: relative;
 }
@@ -24,12 +25,20 @@ $titleBarHeight: 75px;
     transform: translate(-50%, -50%);
 }
 
-#contentDiv {
+.contentDiv {
     background-color: $blanc;
     width: 100%;
     height: calc(100% - #{$titleBarHeight});
+    //height: 100px;
     overflow-y: scroll;
     bottom: 0px;
     position: absolute;
     border-radius: 35px 35px 0px 0px;
 }
+
+#formDiv {
+    left: 100vw;
+}
+#searchDiv.down {
+    height: calc( 80% - #{$titleBarHeight});
+ }

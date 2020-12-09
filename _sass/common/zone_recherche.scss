@@ -1,6 +1,9 @@
 $tagRechercheW: 50px;
 $tagRechercheH: 25px;
 
+$inputW: 80%;
+$inputH: 30px;
+
 #searchArea {
     position: relative;
     P {
@@ -11,6 +14,9 @@ $tagRechercheH: 25px;
         margin: 10px 30px 10px 30px;
     }
     input {
+        padding-left: 10px;
+        padding-right: 10px;
+        box-sizing: border-box;
         background-color: $blanc;
         border: none;
         border-radius: 20px;
@@ -19,6 +25,7 @@ $tagRechercheH: 25px;
         width: 80%;
         height: 30px;
         transform: translateX(-50%);
+        box-shadow: inset $inputH/10 $inputH/10 $inputH/5 #a8a8aa, inset $inputH/10*-1 $inputH/10*-1 $inputH/5 #ffffff;
         &::placeholder{
             color: $bleu;
             opacity: 0.5;
@@ -39,7 +46,6 @@ $tagRechercheH: 25px;
     border-radius: 50px;
     background-color: $bleu;
     color: $blanc;
-    min-width: $tagRechercheW;
     height: $tagRechercheH;
-    box-shadow: $tagRechercheW/10 $tagRechercheH/10 ($tagRechercheW/5 + $tagRechercheH/5)/2 #00102b, $tagRechercheW/10*-1 $tagRechercheH/10*-1 ($tagRechercheW/5 + $tagRechercheH/5)/2 #0042ab;
+    box-shadow: $tagRechercheH/10 $tagRechercheH/10 $tagRechercheH/5 #00102b, $tagRechercheH/10*-1 $tagRechercheH/10*-1 $tagRechercheH/5 #0042ab;
 }
