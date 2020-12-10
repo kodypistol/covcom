@@ -149,23 +149,25 @@
     border-radius: 15px;
     width: 50%;
     height: 50px;
+    background-color: $blanc;
     box-shadow: inset 5px 5px 10px #cccccf, inset -5px -5px 10px #ffffff;
 }
 
 #add_mots-cles {
     width: 50px;
     height: 50px;
+    box-shadow:  5px 5px 10px #cccccf, -5px -5px 10px #ffffff;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    margin-left: 20px;
+    border: none;
     img {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 90%;
-        height: 90%;
+        width: 50%;
+        height: 50%;
     }
 }
 
@@ -175,4 +177,25 @@
 
 #inputDiv_mots-cles {
     position: relative;
+    margin-bottom: 20px;
+}
+
+#table_mots-cles {
+    td {
+        background-color: $bleu;
+        color: $blanc;
+        font-family: Goldplay-Alt-Regular;
+        border-radius: 20px;
+        box-sizing: border-box;
+        padding: 5px 10px 5px 10px;
+        display: none;
+    }
+}
+
+.case_mot {
+    a {
+        margin-right: 5px;
+        text-decoration: none;
+        color: $blanc;
+    }
 }
