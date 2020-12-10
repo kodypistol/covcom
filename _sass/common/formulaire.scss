@@ -30,7 +30,8 @@
 
 #formDiv {
     left: 100vw;
-    transition: left 1s;
+    transition: left 0.3s;
+    transition-timing-function: ease-in-out;
     box-sizing: border-box;
     padding-left: 25px;
     padding-right: 25px;
@@ -101,14 +102,50 @@
     color: $rouge;
 }
 
-.image{
+#img{
     display: flex;
+    justify-content: space-between;
+}
+.image{
+    float:left;
+}
+
+.upload1{
+    float:left;
+    margin-left: 5%;
+    margin-right: 5%;
     padding: 20px 20px;
     height: 100px;
-    width: 20%;
+    width: 8%;
     resize: none;
     border: 0px;
-    
+    background-color: #F0F0F3;
+    box-shadow: inset -7px -7px 10px #FFFFFF, inset 7px 7px 15px rgba(174, 174, 192, 0.4);
+    border-radius: 12px;
+}
+
+.upload2{
+    float:left;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 20px 20px;
+    height: 100px;
+    width: 8%;
+    resize: none;
+    border: 0px;
+    background-color: #F0F0F3;
+    box-shadow: inset -7px -7px 10px #FFFFFF, inset 7px 7px 15px rgba(174, 174, 192, 0.4);
+    border-radius: 12px;
+}
+
+.upload3{
+    float:left;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 100px;
+    width: 120px;
+    resize: none;
+    border: 0px;
     background-color: #F0F0F3;
     box-shadow: inset -7px -7px 10px #FFFFFF, inset 7px 7px 15px rgba(174, 174, 192, 0.4);
     border-radius: 12px;
