@@ -1,0 +1,31 @@
+.cookies {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    background-color: $jaune;
+    border-radius: 35px 35px 0px 0px;
+    box-sizing: border-box;
+    padding: 10px 20px 10px 20px;
+    p {
+        color: $bleu;
+        font-family: Goldplay-Alt-Bold;
+        width: 70%;
+        span {
+            text-decoration: underline;
+        }
+    }
+    button {
+        border: none;
+        border-radius: 50px;
+        background-color: $blanc;
+        color: $bleu;
+        font-family: Goldplay-Alt-Bold;
+        position: relative;
+        height: 50px;
+        width: 40%;
+        box-shadow: -3px -3px 8px 1px #FFDD67, 3px 3px 11px 1px #ECB800;
+    }
+}
