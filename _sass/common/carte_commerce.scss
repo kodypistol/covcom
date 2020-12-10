@@ -53,6 +53,10 @@ $taille_pastille: 10px;
     width: 55%;
     color: $bleu;
     position: relative;
+    .tableContainer {
+        display: flex;
+        justify-content: flex-end;
+    }
 }
 
 .titre_commerce {
@@ -113,20 +117,17 @@ $taille_pastille: 10px;
 
 .tags_carte {
     position: relative;
-    float: right;
-    margin-bottom: 10px;
-    margin-left: 20%;
-    margin-right: 30%;
+    margin-bottom: 15px;
 }
 
 .tags_carte td {
     background-color: $jaune;
     color: $bleu;
     border-radius: 50px;
-    font-size: 10px;
+    font-size: 1.5vh;
     text-align: center;
     font-family: Goldplay-Alt-Regular;
-    padding: 0.5em 1em 0.5em 1em;
+    padding: 5px 10px 5px 10px;
 }
 
 
