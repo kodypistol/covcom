@@ -14,9 +14,19 @@
     font-family: Goldplay-Alt-Light;
 }
 
+.txtSize{
+    font-size: 2.5vh;
+}
+
+.txtSizeMini{
+    font-size: 2vh;
+}
+
 .colSpace {
     height: 30px;
 }
+
+
 
 #formDiv {
     left: 100vw;
@@ -31,13 +41,14 @@
 
 .inputDiv {
     label {
+        font-size: 2vh;
         color: $bleu;
         font-family: Goldplay-Alt-Bold;
     }
     input {
         border: none;
-        border-radius: 20px;
-        width: 100%;
+        border-radius: 15px;
+        width: 90%;
         height: 50px;
         background-color: #F0F0F3;
         box-shadow: inset 5px 5px 10px #cccccf, inset -5px -5px 10px #ffffff;
@@ -48,3 +59,41 @@
     font-size: 12px;
     text-align: center;
 }
+
+.caracteresMax {
+    color: $bleu;
+    font-family: Goldplay-Alt-Regular;
+    font-size: 12px;
+    margin-top: 0.5%;
+}
+
+.inputs{
+    font-family: Goldplay-Alt-Regular;
+    color: $bleu;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+}
+
+#inputDesc{
+    @extend .inputs;
+    padding: 20px 20px;
+    height: 90px;
+    width: 88%;
+    resize: none;
+    border: 0px;
+    border-radius: 20px;
+    background-color: #F0F0F3;
+    box-shadow: inset 5px 5px 10px #cccccf, inset -5px -5px 10px #ffffff;
+
+}
+
+#charNum{
+    @extend .caracteresMax;
+
+}
+
+.colSpaceMini{
+    height: 5px;
+}
+
