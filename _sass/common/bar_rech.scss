@@ -7,15 +7,12 @@
     height: 5em ;
     border-radius: 2em;
     background: #00296B;
-
     box-shadow: -3px -3px 8px 1px #FFFFFF, 3px 3px 11px 1px rgba(174, 174, 192, 0.4);
     transition: left 1s;
 }   
 
 .bloc.show {
     left: 0px;
-    
-
 }
 
 .bar {
@@ -36,6 +33,8 @@
     font-size: 1em;
     background: #FEC601;
     height: 1em;
+    width: 0em ;
     border-radius: 0.5em;
+    transition: 0.2s;
   }
 
