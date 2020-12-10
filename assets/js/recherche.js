@@ -16,24 +16,44 @@ function rechercheUpdate(){
     var cartes = document.querySelectorAll(".carte_commerce");
     cartes.forEach(function(carte, index){
         var tags = carte.querySelector(".tags").value.split(",");
-        var tag;
         var final = true;
+        var i, version;
         for (i = 0; i < termes.length; i++) {
-            console.log(termes[i]);
-            for (j = 0; j < tags.length; j++){
-                tag = tags[j].trim();
-                if(tag.toLowerCase().startsWith(termes[i].toLowerCase())){
-                    final = true;
-                    break;
-                }
-                final = false;
+            if(i === termes.length-1){
+                version = "begin";
+            }else{
+                version = "full";
             }
-
+            if(matchTags(termes[i], tags, version)){
+                final = final && true;
+            }else{
+                final = final && false;
+            }
         }
         if(!final){
             $(carte).hide();
+            $(carte).next(".separateur_carte").hide();
         }else{
             $(carte).show();
+            $(carte).next(".separateur_carte").show();
         }
     });
+}
+
+function matchTags(terme, tags, version){
+    terme = terme.toLowerCase();
+    var tag, i, check;
+    for (i = 0; i < tags.length; i++){
+        tag = tags[i].trim().toLowerCase();
+        if(version === "begin"){
+            check = tag.startsWith(terme);
+        }
+        if(version === "full"){
+            check = (tag === terme);
+        }
+        if(check){
+            return true;
+        }
+    }
+    return false;
 }
