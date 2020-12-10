@@ -12,6 +12,7 @@ $(".btnrech").click(function(){
     
     if( $("#formDiv").hasClass("show") ){
         $("#formDiv").removeClass("show");
+        $(".bloc").removeClass("show");
     }else{
         if(rechercheOuverte){
             fermeRecherche();
@@ -22,7 +23,7 @@ $(".btnrech").click(function(){
         }
     }
 
-});
+}); 
 
 $(window).resize(function(){
     if(rechercheOuverte){
