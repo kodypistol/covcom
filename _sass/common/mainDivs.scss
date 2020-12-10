@@ -29,7 +29,6 @@ $titleBarHeight: 75px;
     background-color: $blanc;
     width: 100%;
     height: calc(100% - #{$titleBarHeight});
-    //height: 100px;
     overflow-y: scroll;
     bottom: 0px;
     position: absolute;
