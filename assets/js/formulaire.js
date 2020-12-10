@@ -38,7 +38,7 @@ inputs.forEach(function(input){
     });
 });
 
-$(".overlay").click(function(){
+$(".overlayUpload").click(function(){
     console.log("click");
     console.log($(this).parent().children("input").click());
 });
