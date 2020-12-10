@@ -17,6 +17,7 @@ function countChar(val) {
 var form = document.querySelector('#formDiv');
 var inputs = form.querySelectorAll('input, textarea');
 var percentElement = form.querySelector('.percentage');
+var progresstext = form.querySelector('.progressiontext');
 function checkProgression() {
     var progress = 0;
 
@@ -29,7 +30,8 @@ function checkProgression() {
     
 
     var percent = (progress / inputs.length) * 100;
-    percentElement.style.width = percent + '%';
+    percentElement.style.width = Math.round(percent) + '%';
+    progresstext.innerText = Math.round(percent) + '%';
     let coulg = false;
     // percentElement.style.background= #0B9710;
     console.log(percent)
@@ -53,4 +55,18 @@ inputs.forEach(function (input) {
 $(".overlayUpload").click(function(){
     console.log("click");
     console.log($(this).parent().children("input").click());
+});
+
+$("#add_mots-cles").click(function(){
+    var mot = $("#input_mots-cles").val();
+    if(mot !== ""){
+        var caseVide = $("#table_mots-cles td:hidden").first();
+        caseVide.children("span").text(mot);
+        caseVide.show();
+        $("#input_mots-cles").val("");
+    }
+});
+
+$(".case_mot a").click(function(){
+    $(this).parent().hide();
 });
