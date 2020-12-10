@@ -17,21 +17,37 @@ function countChar(val) {
 var form = document.querySelector('#formDiv');
 var inputs = form.querySelectorAll('input, textarea');
 var percentElement = form.querySelector('.percentage');
-function checkProgression () {
+var progresstext = form.querySelector('.progressiontext');
+function checkProgression() {
     var progress = 0;
 
-    inputs.forEach(function(input){
-        if (input.value.length > 0){
+    inputs.forEach(function (input) {
+        if (input.value.length > 0) {
             progress += 1;
         }
     });
 
-    var percent = (progress/inputs.length)*100;
-    percentElement.style.width=percent+'%';
-}
+    
 
-inputs.forEach(function(input){
-    input.addEventListener('input',function(){
+    var percent = (progress / inputs.length) * 100;
+    percentElement.style.width = Math.round(percent) + '%';
+    progresstext.innerText = Math.round(percent) + '%';
+    let coulg = false;
+    // percentElement.style.background= #0B9710;
+    console.log(percent)
+    if (percent > 80 && coulg === false) {
+        percentElement.classList.add('green');
+        coulg = true;
+      // percentElement.style.color = "#0B9710"
+    } else {
+        percentElement.classList.remove('green');
+
+    }
+};
+
+
+inputs.forEach(function (input) {
+    input.addEventListener('input', function () {
         checkProgression()
     });
 });
