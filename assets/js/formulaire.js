@@ -60,3 +60,17 @@ $(".overlayUpload").click(function(){
     console.log("click");
     console.log($(this).parent().children("input").click());
 });
+
+$("#add_mots-cles").click(function(){
+    var mot = $("#input_mots-cles").val();
+    if(mot !== ""){
+        var caseVide = $("#table_mots-cles td:hidden").first();
+        caseVide.children("span").text(mot);
+        caseVide.show();
+        $("#input_mots-cles").val("");
+    }
+});
+
+$(".case_mot a").click(function(){
+    $(this).parent().hide();
+});

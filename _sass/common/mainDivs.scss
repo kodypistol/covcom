@@ -43,6 +43,7 @@ $titleBarHeight: 75px;
 }
 
 #soutien {
+    @extend .txtSize;
     color: $bleu;
     font-family: Goldplay-Alt-Light;
     text-align: center;
