@@ -12,9 +12,40 @@ $taille_pastille: 10px;
     width: 40%;
     height: 210px;
     border-radius: 20px;
-    background-image: url("../photos/first.jpg");
     background-size: cover;
     background-position: center;
+}
+
+#first {
+    background-image: url("../photos/first.jpg");
+}
+
+#second {
+    background-image: url("../photos/second.jpg");
+}
+
+#three {
+    background-image: url("../photos/three.jpg");
+}
+
+#four {
+    background-image: url("../photos/four.jpg");
+}
+
+#five {
+    background-image: url("../photos/five.jpg");
+}
+
+#six{
+    background-image: url("../photos/six.jpg");
+}
+
+#seven{
+    background-image: url("../photos/seven.jpg");
+}
+
+#eight {
+    background-image: url("../photos/eight.jpg");
 }
 
 .data_commerce {
@@ -46,6 +77,14 @@ $taille_pastille: 10px;
     height: $taille_pastille;
     border-radius: 50%;
     background-color: $vert;
+    display: inline-block;
+}
+
+.pastille2 {
+    width: $taille_pastille;
+    height: $taille_pastille;
+    border-radius: 50%;
+    background-color : #D7263D ;
     display: inline-block;
 }
 
@@ -86,3 +125,5 @@ $taille_pastille: 10px;
     font-family: Goldplay-Alt-Regular;
     padding: 0.5em 1em 0.5em 1em;
 }
+
+
