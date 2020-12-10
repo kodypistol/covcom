@@ -102,13 +102,15 @@ $taille_pastille: 10px;
     color: $bleu;
     font-family: Goldplay-Alt-Bold;
     height: 40px;
-    width: 30vw;
-    font-size: 2.5vh;
+    width: 50vw;
+    font-size: 2.2vh;
     box-shadow:  5px 5px 10px #cccccf, -5px -5px 10px #ffffff;
     position: relative;
-    margin-top: 5%;
+    margin-top: 10%;
+    margin-left: 18%;
     left: 30%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -45%);
+
 }
 
 .overlay {
