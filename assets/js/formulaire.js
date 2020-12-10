@@ -17,6 +17,7 @@ function countChar(val) {
 var form = document.querySelector('#formDiv');
 var inputs = form.querySelectorAll('input, textarea');
 var percentElement = form.querySelector('.percentage');
+var progresstext = form.querySelector('.progressiontext');
 function checkProgression() {
     var progress = 0;
 
@@ -29,7 +30,8 @@ function checkProgression() {
     
 
     var percent = (progress / inputs.length) * 100;
-    percentElement.style.width = percent + '%';
+    percentElement.style.width = Math.round(percent) + '%';
+    progresstext.innerText = Math.round(percent) + '%';
     let coulg = false;
     // percentElement.style.background= #0B9710;
     console.log(percent)
