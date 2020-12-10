@@ -37,3 +37,8 @@ inputs.forEach(function(input){
         checkProgression()
     });
 });
+
+$(".overlay").click(function(){
+    console.log("click");
+    console.log($(this).parent().children("input").click());
+});

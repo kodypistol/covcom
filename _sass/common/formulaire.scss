@@ -59,6 +59,7 @@
     text-align: center;
 }
 
+
 .caracteresMax {
     color: $bleu;
     font-family: Goldplay-Alt-Regular;
@@ -104,47 +105,74 @@
     display: flex;
     justify-content: space-between;
 }
-.image{
-    float:left;
+
+.uploads {
+    display: flex;
+    justify-content: space-between;
 }
 
-.upload1{
-    float:left;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding: 20px 20px;
-    height: 100px;
-    width: 8%;
-    resize: none;
-    border: 0px;
-    background-color: #F0F0F3;
+.upload{
+    box-sizing: border-box;
+    width: 20vw;
+    height: 80px;
+    border: none;
     box-shadow: inset -7px -7px 10px #FFFFFF, inset 7px 7px 15px rgba(174, 174, 192, 0.4);
     border-radius: 12px;
+    position: relative;
+    input {
+        opacity: 0%;
+    }
+    .overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 60%;
+            height: 60%;
+        }
+    }
 }
 
-.upload2{
-    float:left;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding: 20px 20px;
-    height: 100px;
-    width: 8%;
-    resize: none;
-    border: 0px;
-    background-color: #F0F0F3;
-    box-shadow: inset -7px -7px 10px #FFFFFF, inset 7px 7px 15px rgba(174, 174, 192, 0.4);
-    border-radius: 12px;
+#entrez_mots-cles {
+    color: $bleu;
+    font-family: Goldplay-ALt-Bold;
 }
 
-.upload3{
-    float:left;
-    margin-left: 5%;
-    margin-right: 5%;
-    height: 100px;
-    width: 120px;
-    resize: none;
-    border: 0px;
-    background-color: #F0F0F3;
-    box-shadow: inset -7px -7px 10px #FFFFFF, inset 7px 7px 15px rgba(174, 174, 192, 0.4);
-    border-radius: 12px;
+#input_mots-cles {
+    border: none;
+    border-radius: 15px;
+    width: 50%;
+    height: 50px;
+    box-shadow: inset 5px 5px 10px #cccccf, inset -5px -5px 10px #ffffff;
+}
+
+#add_mots-cles {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        height: 90%;
+    }
+}
+
+#input_mots-cles, #add_mots-cles {
+    display: inline-block;
+}
+
+#inputDiv_mots-cles {
+    position: relative;
 }
