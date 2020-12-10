@@ -60,13 +60,30 @@ $(".overlayUpload").click(function(){
 $("#add_mots-cles").click(function(){
     var mot = $("#input_mots-cles").val();
     if(mot !== ""){
-        var caseVide = $("#table_mots-cles td:hidden").first();
-        caseVide.children("span").text(mot);
-        caseVide.show();
+        var newCase = $("#ref_case_mot").clone().removeAttr("id");
+        newCase.children("span").text(mot);
+        newCase.children("a").click(function(){
+            $(this).parent().remove();
+        });
+        $("#liste_mots-cles").append(newCase);
         $("#input_mots-cles").val("");
     }
 });
 
-$(".case_mot a").click(function(){
-    $(this).parent().hide();
+$("#add_mots-cles").click(function(){
+    var mot = $("#input_mots-cles").val();
+    if(mot !== ""){
+        var newCase = $("#ref_case_mot").clone().removeAttr("id");
+        newCase.children("span").text(mot);
+        newCase.children("a").click(function(){
+            $(this).parent().remove();
+        });
+        $("#liste_mots-cles").append(newCase);
+        $("#input_mots-cles").val("");
+    }
+});
+
+$(".barre_jour").click(function(){
+    $(".jour_selected").removeClass("jour_selected");
+    $(this).addClass("jour_selected");
 });

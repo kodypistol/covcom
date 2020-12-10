@@ -26,9 +26,11 @@
     height: 30px;
 }
 
+$vitesseForm: 0.3s;
+
 #formDiv {
     left: 100vw;
-    transition: left 0.3s;
+    transition: left $vitesseForm;
     transition-timing-function: ease-in-out;
     box-sizing: border-box;
     padding-left: 25px;
@@ -72,7 +74,7 @@
     color: $bleu;
     padding-left: 5%;
     padding-right: 5%;
-    
+    box-sizing: border-box;
 }
 
 #inputDesc{
@@ -147,10 +149,14 @@
 #input_mots-cles {
     border: none;
     border-radius: 15px;
-    width: 50%;
+    width: 70%;
     height: 50px;
     background-color: $blanc;
     box-shadow: inset 5px 5px 10px #cccccf, inset -5px -5px 10px #ffffff;
+    font-family: Goldplay-Alt-Regular;
+    box-sizing: border-box;
+    padding-left: 5%;
+    padding-right: 5%;;
 }
 
 #add_mots-cles {
@@ -180,22 +186,56 @@
     margin-bottom: 20px;
 }
 
-#table_mots-cles {
-    td {
-        background-color: $bleu;
-        color: $blanc;
-        font-family: Goldplay-Alt-Regular;
-        border-radius: 20px;
-        box-sizing: border-box;
-        padding: 5px 10px 5px 10px;
-        display: none;
-    }
+#liste_mots-cles {
+    border-spacing: 10px;
 }
 
 .case_mot {
+    background-color: $bleu;
+    color: $blanc;
+    font-family: Goldplay-Alt-Regular;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 5px 10px 5px 10px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
     a {
         margin-right: 5px;
         text-decoration: none;
         color: $blanc;
     }
+}
+
+#ref_case_mot {
+    display: none;
+}
+
+#demande_horaires {
+    font-family: Goldplay-Alt-Regular;
+    color: $bleu;
+}
+
+#barre_jours {
+    background-color: $bleu;
+    border-radius: 20px;
+    width: 100%;
+    overflow-x: scroll;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+
+.barre_jour {
+    color: $blanc;
+    display: inline-block;
+    font-family: Goldplay-Alt-Bold;
+    border-radius: 20px;
+    padding: 10px 10px 10px 10px;
+}
+
+.jour_selected {
+    color: $bleu;
+    background-color: $jaune;
 }

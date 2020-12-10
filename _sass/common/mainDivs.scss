@@ -27,7 +27,8 @@ $titleBarHeight: 75px;
 
 .contentDiv {
     background-color: $blanc;
-    width: 100%;
+    width: 100vw;
+    overflow-x: hidden;
     height: calc(100% - #{$titleBarHeight});
     overflow-y: scroll;
     bottom: 0px;
