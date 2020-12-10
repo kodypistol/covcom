@@ -6,6 +6,17 @@
     <title>{{ page.title }} - {{ site.title }}</title>
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <!--adel modif-->  <script src="http://code.jquery.com/jquery-1.5.js"></script>
+    <script>
+      function countChar(val) {
+        var len = val.value.length;
+        if (len >= 240) {
+          val.value = val.value.substring(0, 240);
+        } else {
+          $('#charNum').text(("(" + (240 - len) + (" caractères restants).")));
+        }
+      };
+    </script> <!--adel modif-->
   </head>
   <body>
     {% include common/mainDivs.html %}
