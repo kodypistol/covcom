@@ -37,6 +37,11 @@ function rechercheUpdate(){
             $(carte).show();
             $(carte).next(".separateur_carte").show();
         }
+        if($(".carte_commerce").length === $(".carte_commerce:hidden").length){
+            $("#aucunResultat").show();
+        }else{
+            $("#aucunResultat").hide();
+        }
     });
 }
 
