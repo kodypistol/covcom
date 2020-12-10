@@ -7,7 +7,7 @@ window.addEventListener('scroll', function () {
     let avActived = false;
 
     const mapY = map.getBoundingClientRect().y;
-    console.log(mapY)
+    console.log(mapY);
     anchors.forEach(function (title, index) {
         const titleY = title.getBoundingClientRect().y;
 
@@ -22,3 +22,6 @@ window.addEventListener('scroll', function () {
 
 
     });
+
+    
+});
