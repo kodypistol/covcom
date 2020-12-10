@@ -49,3 +49,8 @@ inputs.forEach(function (input) {
         checkProgression()
     });
 });
+
+$(".overlayUpload").click(function(){
+    console.log("click");
+    console.log($(this).parent().children("input").click());
+});
