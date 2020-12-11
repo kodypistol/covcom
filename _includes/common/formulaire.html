@@ -3,39 +3,39 @@
     <p class="txtBleu txtLight" id="champsObligatoires">Les champs marqués d’un * sont obligatoires.</p>
     <p class="txtBleu txtLight">Parlez-nous de ce commerce :</p>
     <div class="inputDiv txtSize">
-        <label for="inputName">*Quel est son nom ?</label>
-        <input type="text" class="inputs" id="inputName">
+        <label for="name">*Quel est son nom ?</label>
+        <input type="text" class="inputs">
     </div>
     <div class="colSpace"></div>
     <div class="inputDiv">
-        <label for="inputTel">Quel est le numéro de téléphone ?</label>
-        <input type="text" class="inputs" id="inputTel">
+        <label for="name">Quel est le numéro de téléphone ?</label>
+        <input type="text" class="inputs">
     </div>
     <div class="colSpace"></div>
     <div class="inputDiv">
-        <label for="inputAdresse">*Où se trouve ce commerce ?</label>
-        <input type="text" class="inputs" id="inputAdresse">
+        <label for="name">*Où se trouve ce commerce ?</label>
+        <input type="text" class="inputs">
     </div>
     <div class="colSpace"></div>
     <div class="inputDiv">
-        <label for="inputWeb" class="txtSize">Le commerce dispose t’il d’un site web ?</label>
-        <input type="text" class="inputs" id="inputWeb">
+        <label for="name" class="txtSize">Le commerce dispose t’il d’un site web ?</label>
+        <input type="text" class="inputs">
     </div>
 
 
     <div class="colSpace"></div>
     <div class="inputDiv">
-        <label for="inputDesc" class="txtSize">*Décrivez-nous brièvement ce commerce :</label>
+        <label for="name" class="txtSize">*Décrivez-nous brièvement ce commerce :</label>
         <div id="charNum">(240 caractères max.)</div>
         <div class="colSpaceMini"></div>
-        <textarea id="inputDesc" maxlength=241 onkeyup="countChar(this)" id="inputDesc"></textarea>
+        <textarea id="inputDesc" maxlength=241 onkeyup="countChar(this)"></textarea>
     </div>
 
     <div class="colSpaceMini"></div>
 
     <p class="txtBleu txtLight txtSize">Donnez-nous quelques autres informations :</p>
-    
-    <label class="txtBold txtBleu txtSizeMini">Déposez trois photos au maximum :</label>
+
+    <label for="name" class="txtBold txtBleu txtSizeMini">Déposez trois photos au maximum :</label>
     <div class="txtLight txtBleu">Formats acceptés : JPG, PNG (10Mo max.)</div>
     <div class="colSpaceMini"></div>
     <div class="uploads">
@@ -62,102 +62,78 @@
     <div class="colSpace"></div>
     <!-- réseaux -->
 
+    <div class="inputDiv">
+        <label for="name" class="txtSize">Entrez les réseaux sociaux :</label>
+
+        <div><img src="assets/icons/facebook.svg">
+            <input type="text" class="inputs"></div>
+        <div><img src="assets/icons/inst.svg">
+            <input type="text" class="inputs"></div>
+        <div><img src="assets/icons/snap.svg">
+            <input type="text" class="inputs"></div>
+    </div>
+
+    <!-- réseaux -->
     <div class="colSpace"></div>
 
     <div id="mots-cles">
         <p id="entrez_mots-cles">Entrez les mots-clés qui correspondent le plus au commerce :</p>
         <div id="inputDiv_mots-cles">
-            <input type="text" id="input_mots-cles" class="inputs">
+            <input type="text" id="input_mots-cles">
             <button id="add_mots-cles">
                 <img src="assets/icons/add.svg">
             </button>
         </div>
-        <div id="liste_mots-cles">
-            <div id="ref_case_mot" class="case_mot">
-                <a href="#">x</a>
-                <span></span>
-            </div>
-        </div>
-    </div>
-
-    <div class="colSpace"></div>
-
-    <div id="horaires">
-        <p id="demande_horaires">*Horaires d’ouverture :</p>
-        <div id="barre_jours">
-            <p class="barre_jour jour_selected">Lundi</p>
-            <p class="barre_jour">Mardi</p>
-            <p class="barre_jour">Mercredi</p>
-            <p class="barre_jour">Jeudi</p>
-            <p class="barre_jour">Vendredi</p>
-            <p class="barre_jour">Samedi</p>
-            <p class="barre_jour">Dimanche</p>
-        </div>
-        <table id="inputDivHoraires">
-            <tr class="inputHorairesLigne">
-                <td><p>Matin</p></td>
-                <td>
-                    <input class="inputs inputHoraire" id="matinLundi1">
-                    <input class="inputs inputHoraire" id="matinMardi1">
-                    <input class="inputs inputHoraire" id="matinMercredi1">
-                    <input class="inputs inputHoraire" id="matinJeudi1">
-                    <input class="inputs inputHoraire" id="matinVendredi1">
-                    <input class="inputs inputHoraire" id="matinSamedi1">
-                    <input class="inputs inputHoraire" id="matinDimanche1">
+        <table id="table_mots-cles">
+            <tr>
+                <td id="mot-cle1" class="case_mot">
+                    <a href="#">x</a>
+                    <span></span>
                 </td>
-                <td>
-                    <input class="inputs inputHoraire" id="matinLundi2">
-                    <input class="inputs inputHoraire" id="matinMardi2">
-                    <input class="inputs inputHoraire" id="matinMercredi2">
-                    <input class="inputs inputHoraire" id="matinJeudi2">
-                    <input class="inputs inputHoraire" id="matinVendredi2">
-                    <input class="inputs inputHoraire" id="matinSamedi2">
-                    <input class="inputs inputHoraire" id="matinDimanche2">
+                <td id="mot-cle2" class="case_mot">
+                    <a href="#">x</a>
+                    <span></span>
                 </td>
-            </div>
-            <tr class="inputHorairesLigne">
-                <td><p>Après-midi</p></td>
-                <td>
-                    <input class="inputs inputHoraire" id="apremLundi1">
-                    <input class="inputs inputHoraire" id="apremMardi1">
-                    <input class="inputs inputHoraire" id="apremMercredi1">
-                    <input class="inputs inputHoraire" id="apremJeudi1">
-                    <input class="inputs inputHoraire" id="apremVendredi1">
-                    <input class="inputs inputHoraire" id="apremSamedi1">
-                    <input class="inputs inputHoraire" id="apremDimanche1">
+                <td id="mot-cle3" class="case_mot">
+                    <a href="#">x</a>
+                    <span></span>
                 </td>
-                <td>
-                    <input class="inputs inputHoraire" id="apremLundi2">
-                    <input class="inputs inputHoraire" id="apremMardi2">
-                    <input class="inputs inputHoraire" id="apremMercredi2">
-                    <input class="inputs inputHoraire" id="apremJeudi2">
-                    <input class="inputs inputHoraire" id="apremVendredi2">
-                    <input class="inputs inputHoraire" id="apremSamedi2">
-                    <input class="inputs inputHoraire" id="apremDimanche2">
+            </tr>
+            <tr>
+                <td id="mot-cle4" class="case_mot">
+                    <a href="#">x</a>
+                    <span></span>
                 </td>
-            </div>
+                <td id="mot-cle5" class="case_mot">
+                    <a href="#">x</a>
+                    <span></span>
+                </td>
+                <td id="mot-cle6" class="case_mot">
+                    <a href="#">x</a>
+                    <span></span>
+                </td>
+            </tr>
         </table>
-        <button id="effacerJour" onclick="resetJour();">- Effacer ce jour</button>
     </div>
 
     <div class="colSpace"></div>
-
-    <div class="separateur_carte">
-    </div>
-
     <div class="colSpace"></div>
-
-    <button id="boutonRef">Référencer</button>
-
+    <div class="colSpace"></div>
+    <div class="colSpace"></div>
+    <div class="colSpace"></div>
+    <div class="colSpace"></div>
+    <div class="colSpace"></div>
+    <div class="colSpace"></div>
+    <div class="colSpace"></div>
     <div class="colSpace"></div>
 
 
     <div class='bloc'>
         <p class="txtblanc txtBold txtSiz txtgauche txtprog"><span class="progressiontext"></span></p>
-        
+
 
         <div class="bar">
             <div class="percentage has-tip">
+            </div>
         </div>
     </div>
-</div>
