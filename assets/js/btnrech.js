@@ -13,6 +13,7 @@ $(".btnrech").click(function(){
     if( $("#formDiv").hasClass("show") ){
         $("#formDiv").removeClass("show");
         $(".bloc").removeClass("show");
+        $("#bouton_plus").children("img").attr("src","assets/icons/plus_alone.svg");
     }else{
         if(rechercheOuverte){
             fermeRecherche();

@@ -1,4 +1,11 @@
-function bringForm(){
-    $("#formDiv").addClass("show");
-    $(".bloc").addClass("show");
-}
+$("#bouton_plus").click(function(){
+    if($("#formDiv").hasClass("show")){
+        $("#formDiv").removeClass("show");
+        $(".bloc").removeClass("show");
+        $(this).children("img").attr("src","assets/icons/plus_alone.svg");
+    }else{
+        $("#formDiv").addClass("show");
+        $(".bloc").addClass("show");
+        $(this).children("img").attr("src","assets/icons/minus.svg");
+    }
+});
