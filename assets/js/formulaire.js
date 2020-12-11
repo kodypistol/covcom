@@ -104,6 +104,18 @@ $(".barre_jour").click(function(){
     $(jourInputSelector(newJour)).show();
 });
 
+$('.inputHoraire').clockTimePicker({
+    alwaysSelectHoursFirst: true,
+    colors: {
+        buttonTextColor: '#00296B',
+        popupHeaderBackgroundColor: "#00296B",
+        selectorColor: "#00296B",
+    },
+    fonts: {
+        fontFamily: 'Goldplay-Alt-Regular',
+    }
+});
+
 $(jourInputSelector($(".jour_selected").text())).show();
 
 function jourInputSelector(jour){
