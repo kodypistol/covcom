@@ -57,8 +57,11 @@ inputs.forEach(function (input) {
 });
 
 $(".overlayUpload").click(function(){
-    console.log("click");
-    console.log($(this).parent().children("input").click());
+    $(this).parent().children("input").click();
+});
+
+$(".upload input").change(function(){
+    $(this).next().children("img").attr("src","assets/icons/remove.svg")
 });
 
 $("#add_mots-cles").click(function(){
@@ -88,6 +91,22 @@ $("#add_mots-cles").click(function(){
 });
 
 $(".barre_jour").click(function(){
+    var prevJour = $(".jour_selected").text();
+    var newJour = $(this).text();
     $(".jour_selected").removeClass("jour_selected");
     $(this).addClass("jour_selected");
+    console.log(jourInputSelector(prevJour));
+    $(jourInputSelector(prevJour)).hide();
+    $(jourInputSelector(newJour)).show();
 });
+
+$(jourInputSelector($(".jour_selected").text())).show();
+
+function jourInputSelector(jour){
+    return "#matin"+jour+"1,"+"#matin"+jour+"2,"+"#aprem"+jour+"1,"+"#aprem"+jour+"2";
+}
+
+function resetJour(){
+    var jour = $(".jour_selected").text();
+    $(jourInputSelector(jour)).val("");
+}

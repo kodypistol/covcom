@@ -47,12 +47,7 @@ $vitesseForm: 0.3s;
         font-family: Goldplay-Alt-Bold;
     }
     input {
-        border: none;
-        border-radius: 15px;
         width: 90%;
-        height: 50px;
-        background-color: #F0F0F3;
-        box-shadow: inset 5px 5px 10px #cccccf, inset -5px -5px 10px #ffffff;
     }
 }
 
@@ -72,9 +67,14 @@ $vitesseForm: 0.3s;
 .inputs{
     font-family: Goldplay-Alt-Regular;
     color: $bleu;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 20px;
+    padding-right: 20px;
     box-sizing: border-box;
+    border: none;
+    border-radius: 15px;
+    height: 50px;
+    background-color: #F0F0F3;
+    box-shadow: inset 5px 5px 10px #cccccf, inset -5px -5px 10px #ffffff;
 }
 
 #inputDesc{
@@ -147,16 +147,7 @@ $vitesseForm: 0.3s;
 }
 
 #input_mots-cles {
-    border: none;
-    border-radius: 15px;
     width: 70%;
-    height: 50px;
-    background-color: $blanc;
-    box-shadow: inset 5px 5px 10px #cccccf, inset -5px -5px 10px #ffffff;
-    font-family: Goldplay-Alt-Regular;
-    box-sizing: border-box;
-    padding-left: 5%;
-    padding-right: 5%;;
 }
 
 #add_mots-cles {
@@ -238,4 +229,54 @@ $vitesseForm: 0.3s;
 .jour_selected {
     color: $bleu;
     background-color: $jaune;
+}
+
+.inputHorairesLigne {
+    td {
+        padding-top: 10px;
+    }
+    p {
+        font-family: Goldplay-Alt-Regular;
+        color: $bleu;
+    }
+}
+
+.inputHoraire {
+    width: 25vw;
+    display: none;
+}
+
+#inputDivHoraires {
+    width: 100%;
+}
+
+#effacerJour {
+    font-family: Goldplay-Alt-Regular;
+    color: $bleu;
+    border: none;
+    border-radius: 15px;
+    box-shadow:  5px 5px 10px #cccccf, -5px -5px 10px #ffffff;
+    background-color: $blanc;
+    box-sizing: border-box;
+    padding: 10px 20px 10px 20px;
+    margin-top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+
+#boutonRef {
+    font-family: Goldplay-Alt-Bold;
+    color: $bleu;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    box-shadow:  5px 5px 10px #cccccf, -5px -5px 10px #ffffff;
+    background-color: $blanc;
+    box-sizing: border-box;
+    padding: 10px 20px 10px 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    margin-bottom: 100px;
 }

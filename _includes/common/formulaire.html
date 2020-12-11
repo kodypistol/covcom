@@ -3,39 +3,39 @@
     <p class="txtBleu txtLight" id="champsObligatoires">Les champs marqués d’un * sont obligatoires.</p>
     <p class="txtBleu txtLight">Parlez-nous de ce commerce :</p>
     <div class="inputDiv txtSize">
-        <label for="name">*Quel est son nom ?</label>
-        <input type="text" class="inputs">
+        <label for="inputName">*Quel est son nom ?</label>
+        <input type="text" class="inputs" id="inputName">
     </div>
     <div class="colSpace"></div>
     <div class="inputDiv">
-        <label for="name">Quel est le numéro de téléphone ?</label>
-        <input type="text" class="inputs">
+        <label for="inputTel">Quel est le numéro de téléphone ?</label>
+        <input type="text" class="inputs" id="inputTel">
     </div>
     <div class="colSpace"></div>
     <div class="inputDiv">
-        <label for="name">*Où se trouve ce commerce ?</label>
-        <input type="text" class="inputs">
+        <label for="inputAdresse">*Où se trouve ce commerce ?</label>
+        <input type="text" class="inputs" id="inputAdresse">
     </div>
     <div class="colSpace"></div>
     <div class="inputDiv">
-        <label for="name" class="txtSize">Le commerce dispose t’il d’un site web ?</label>
-        <input type="text" class="inputs">
+        <label for="inputWeb" class="txtSize">Le commerce dispose t’il d’un site web ?</label>
+        <input type="text" class="inputs" id="inputWeb">
     </div>
 
 
     <div class="colSpace"></div>
     <div class="inputDiv">
-        <label for="name" class="txtSize">*Décrivez-nous brièvement ce commerce :</label>
+        <label for="inputDesc" class="txtSize">*Décrivez-nous brièvement ce commerce :</label>
         <div id="charNum">(240 caractères max.)</div>
         <div class="colSpaceMini"></div>
-        <textarea id="inputDesc" maxlength=241 onkeyup="countChar(this)"></textarea>
+        <textarea id="inputDesc" maxlength=241 onkeyup="countChar(this)" id="inputDesc"></textarea>
     </div>
 
     <div class="colSpaceMini"></div>
 
     <p class="txtBleu txtLight txtSize">Donnez-nous quelques autres informations :</p>
     
-    <label for="name" class="txtBold txtBleu txtSizeMini">Déposez trois photos au maximum :</label>
+    <label class="txtBold txtBleu txtSizeMini">Déposez trois photos au maximum :</label>
     <div class="txtLight txtBleu">Formats acceptés : JPG, PNG (10Mo max.)</div>
     <div class="colSpaceMini"></div>
     <div class="uploads">
@@ -67,7 +67,7 @@
     <div id="mots-cles">
         <p id="entrez_mots-cles">Entrez les mots-clés qui correspondent le plus au commerce :</p>
         <div id="inputDiv_mots-cles">
-            <input type="text" id="input_mots-cles">
+            <input type="text" id="input_mots-cles" class="inputs">
             <button id="add_mots-cles">
                 <img src="assets/icons/add.svg">
             </button>
@@ -90,17 +90,65 @@
             <p class="barre_jour">Mercredi</p>
             <p class="barre_jour">Jeudi</p>
             <p class="barre_jour">Vendredi</p>
+            <p class="barre_jour">Samedi</p>
+            <p class="barre_jour">Dimanche</p>
         </div>
+        <table id="inputDivHoraires">
+            <tr class="inputHorairesLigne">
+                <td><p>Matin</p></td>
+                <td>
+                    <input class="inputs inputHoraire" id="matinLundi1">
+                    <input class="inputs inputHoraire" id="matinMardi1">
+                    <input class="inputs inputHoraire" id="matinMercredi1">
+                    <input class="inputs inputHoraire" id="matinJeudi1">
+                    <input class="inputs inputHoraire" id="matinVendredi1">
+                    <input class="inputs inputHoraire" id="matinSamedi1">
+                    <input class="inputs inputHoraire" id="matinDimanche1">
+                </td>
+                <td>
+                    <input class="inputs inputHoraire" id="matinLundi2">
+                    <input class="inputs inputHoraire" id="matinMardi2">
+                    <input class="inputs inputHoraire" id="matinMercredi2">
+                    <input class="inputs inputHoraire" id="matinJeudi2">
+                    <input class="inputs inputHoraire" id="matinVendredi2">
+                    <input class="inputs inputHoraire" id="matinSamedi2">
+                    <input class="inputs inputHoraire" id="matinDimanche2">
+                </td>
+            </div>
+            <tr class="inputHorairesLigne">
+                <td><p>Après-midi</p></td>
+                <td>
+                    <input class="inputs inputHoraire" id="apremLundi1">
+                    <input class="inputs inputHoraire" id="apremMardi1">
+                    <input class="inputs inputHoraire" id="apremMercredi1">
+                    <input class="inputs inputHoraire" id="apremJeudi1">
+                    <input class="inputs inputHoraire" id="apremVendredi1">
+                    <input class="inputs inputHoraire" id="apremSamedi1">
+                    <input class="inputs inputHoraire" id="apremDimanche1">
+                </td>
+                <td>
+                    <input class="inputs inputHoraire" id="apremLundi2">
+                    <input class="inputs inputHoraire" id="apremMardi2">
+                    <input class="inputs inputHoraire" id="apremMercredi2">
+                    <input class="inputs inputHoraire" id="apremJeudi2">
+                    <input class="inputs inputHoraire" id="apremVendredi2">
+                    <input class="inputs inputHoraire" id="apremSamedi2">
+                    <input class="inputs inputHoraire" id="apremDimanche2">
+                </td>
+            </div>
+        </table>
+        <button id="effacerJour" onclick="resetJour();">- Effacer ce jour</button>
     </div>
 
     <div class="colSpace"></div>
+
+    <div class="separateur_carte">
+    </div>
+
     <div class="colSpace"></div>
-    <div class="colSpace"></div>
-    <div class="colSpace"></div>
-    <div class="colSpace"></div>
-    <div class="colSpace"></div>
-    <div class="colSpace"></div>
-    <div class="colSpace"></div>
+
+    <button id="boutonRef">Référencer</button>
+
     <div class="colSpace"></div>
 
 
