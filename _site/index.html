@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Cov'Com : Commerçants</title>
+    <link rel="icon" href="assets/photos/COVCOMLOGO.png"/>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  
+  </head>
+  <body>
+    <div id="backgroundDiv">
+    <div id="titleDiv">
+        <h1 id="titre">COV'COM</h1>
+        <button class="bouton_titre btnrech" id="bouton_recherche">
+    <img src="assets/icons/loupe.svg">
+</button>
+        <button class="bouton_titre" id="bouton_plus" onclick="bringForm();">
+    <img src="assets/icons/plus_alone.svg">
+</button>
+    </div>
+    
+    <div class="panel" id="searchArea">
+    <p>Dites nous ce qui vous ferait plaisir :</p>
+    <input type="text" id="inputRecherche" placeholder="Rechercher un commerce de proximité">
+    <div id="tagsRecherche">
+        <button class="tagRecherche">
+            click&collect
+        </button>
+        <button class="tagRecherche">
+            livraison
+        </button>
+        <button class="tagRecherche">
+            artisan
+        </button>
+        <button class="tagRecherche">
+            épicerie
+        </button>
+        <button class="tagRecherche">
+            zéro-déchet
+        </button>
+        <button class="tagRecherche">
+            artisan
+        </button>
+        <button class="tagRecherche">
+            fleuriste
+        </button>
+    </div>
+</div>
+
+    <div id="searchDiv" class="contentDiv">
+        <h2 id="soutien">Soutenez vos commerçants</h2>
+        <p id="aucunResultat">Aucun résultats...</p>
+        
+        
+        <div class="carte_commerce">
+    <input type="hidden" class="tags" value="fleuriste, click&collect, artisan, Paris">
+    <div class="photo_commerce" id="first" role="img" alt="Photographie présentant une boutique de fleurs. Nous pouvons observer des pots de fleurs, variées par leurs couleurs.">
+    </div>
+    <div class="data_commerce">
+        <div class="statut_ouverture">
+            <div class="pastille"></div>
+            <span class="label_pastille">Ouvert</span>
+        </div>
+        <p class="titre_commerce">Monsieur K au Jardin</p>
+        <p class="desc_commerce">Artisan fleuriste situé dans le quartier de Belleville à Paris. Venez découvrir toutes les variétés de fleurs, les objets de déco chinés avec soin.</p>
+        <div class="tableContainer">
+            <table class="tags_carte">
+                <tr>
+                    <td>fleuriste</td>
+                    <td>click&collect</td>
+                </tr>
+                <tr>
+                    <td>artisan</td>
+                    <td>Paris</td>
+                </tr>
+            </table>
+        </div>
+
+
+
+
+        <button id="btnDecouvrir" class="bouton_decouvrir">Découvrir</button>
+        <div id="overlay" class="overlay">
+            <div id="popup" class="popup">
+            <h2>
+            En cours de programmation. 
+            <span id="btnClose" class="btnClose">&times;</span>
+            </h2>
+            <div>
+            Bravo pour être arrivé jusqu'ici ! Malheureusement, c'est encore en construction.
+            </div>
+            <img src="assets/photos/pelleteusearnaque.png" class="tractopelle">
+            
+
+        </div>
+        </div>
+
+
+
+
+    </div>
+</div>
+
+<div class="separateur_carte">
+</div>
+
+<div class="carte_commerce">
+    <input type="hidden" class="tags" value="épicerie, click&collect, zéro-déchet, Thionville">
+    <div class="photo_commerce" id="second" role="img" alt="Photographie d'intérieur présentant des conteneurs de nourriture et des distributeurs manuels de nourriture.">
+        
+    </div>
+    <div class="data_commerce">
+        <div class="statut_ouverture">
+            <div class="pastille"></div>
+            <span class="label_pastille">Ouvert</span>
+        </div>
+        <p class="titre_commerce">Les Bocaux de Camille</p>
+        <p class="desc_commerce">Épicerie en vrac situé dans la zone de Linkling à Thionville. Venez avec vos propres contenants pour faire vos courses du quotidien.</p>
+        <div class="tableContainer">
+            <table class="tags_carte">
+                <tr>
+                    <td>épicerie</td>
+                    <td>click&collect</td>
+                </tr>
+                <tr>
+                    <td>zéro-déchet</td>
+                    <td>Thionville</td>
+                </tr>
+            </table>
+        </div>
+        <button id="btnDecouvrir" class="bouton_decouvrir">Découvrir</button>
+        <div id="overlay" class="overlay">
+            <div id="popup" class="popup">
+            <h2>
+            En cours de programmation. 
+            <span id="btnClose" class="btnClose">&times;</span>
+            </h2>
+            <div>
+            Bravo pour être arrivé jusqu'ici ! Malheureusement, c'est encore en construction.
+            </div>
+            <img src="assets/photos/pelleteusearnaque.png" class="tractopelle">
+        </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="separateur_carte">
+</div>
+
+<div class="carte_commerce">
+    <input type="hidden" class="tags" value="fromagerie, click&collect, caviste, Chartres">
+    <div class="photo_commerce" id="three" role="img" alt="Photographie de l'intérieur d'une fromagerie présentant le stand de fromage frais.">
+        
+    </div>
+    <div class="data_commerce">
+        <div class="statut_ouverture">
+            <div class="pastille"></div>
+            <span class="label_pastille">Ouvert</span>
+        </div>
+        <p class="titre_commerce">Ferme Sainte Suzanne</p>
+        <p class="desc_commerce">La Ferme propose un large choix de fromages fermiers, de vins régionaux et de produits d’épicerie. </p>
+        <div class="tableContainer">
+            <table class="tags_carte">
+                <tr>
+                    <td>fromagerie</td>
+                    <td>click&collect</td>
+                </tr>
+                <tr>
+                    <td>caviste</td>
+                    <td>Chartres</td>
+                </tr>
+            </table>
+        </div>
+          <button id="btnDecouvrir" class="bouton_decouvrir">Découvrir</button>
+        <div id="overlay" class="overlay">
+            <div id="popup" class="popup">
+            <h2>
+            En cours de programmation. 
+            <span id="btnClose" class="btnClose">&times;</span>
+            </h2>
+            <div>
+            Bravo pour être arrivé jusqu'ici ! Malheureusement, c'est encore en construction.
+            </div>
+            <img src="assets/photos/pelleteusearnaque.png" class="tractopelle">
+        </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="separateur_carte">
+</div>
+
+<div class="carte_commerce">
+    <input type="hidden" class="tags" value="épicerie, pâtisserie, restauration, Bordeaux">
+    <div class="photo_commerce" id="four" role="img" alt="Photographie présentant la devanture d'un salon de thé. Nous pouvons apercevoir la terrasse.">
+        
+    </div>
+    <div class="data_commerce">
+        <div class="statut_ouverture">
+            <div class="pastille2"></div>
+            <span class="label_pastille">Fermé</span>
+        </div>
+        <p class="titre_commerce">Books & Coffee</p>
+        <p class="desc_commerce">Boutique de thés et cafés au charme d’antan avec produits d'épicerie fine, cadeaux et dégustation sur place. </p>
+        <div class="tableContainer">
+            <table class="tags_carte">
+                <tr>
+                    <td>épicerie</td>
+                    <td>pâtisserie</td>
+                </tr>
+                <tr>
+                    <td>restauration</td>
+                    <td>Bordeaux</td>
+                </tr>
+            </table>
+        </div>
+          <button id="btnDecouvrir" class="bouton_decouvrir">Découvrir</button>
+        <div id="overlay" class="overlay">
+            <div id="popup" class="popup">
+            <h2>
+            En cours de programmation. 
+            <span id="btnClose" class="btnClose">&times;</span>
+            </h2>
+            <div>
+            Bravo pour être arrivé jusqu'ici ! Malheureusement, c'est encore en construction.
+            </div>
+            <img src="assets/photos/pelleteusearnaque.png" class="tractopelle">
+        </div>
+        </div>
+
+    </div>
+</div>
+<div class="separateur_carte">
+</div>
+
+
+<div class="carte_commerce">
+    <input type="hidden" class="tags" value="chocolatier, livraison, pâtissier, Saint-Germain">
+    <div class="photo_commerce" id="five" role="img" alt="Photographie commerciale de près présentant des friandises ainsi que des viennoiseries.">
+        
+    </div>
+    <div class="data_commerce">
+        <div class="statut_ouverture">
+            <div class="pastille"></div>
+            <span class="label_pastille">Ouvert</span>
+        </div>
+        <p class="titre_commerce">Hardy Pâtissier, Chololatier 
+            et Triateur</p>
+        <p class="desc_commerce">Pâtisserie, chocolatier et traiteur situé à Saint-Germain en Laye. Venez déguister  les spécialités de la maison. </p>
+        <div class="tableContainer">
+            <table class="tags_carte">
+                <tr>
+                    <td>chocolatier</td>
+                    <td>livraison</td>
+                </tr>
+                <tr>
+                    <td>pâtissier</td>
+                    <td>Saint-Germain</td>
+                </tr>
+            </table>
+        </div>
+          <button id="btnDecouvrir" class="bouton_decouvrir">Découvrir</button>
+        <div id="overlay" class="overlay">
+            <div id="popup" class="popup">
+            <h2>
+            En cours de programmation. 
+            <span id="btnClose" class="btnClose">&times;</span>
+            </h2>
+            <div>
+            Bravo pour être arrivé jusqu'ici ! Malheureusement, c'est encore en construction.
+            </div>
+            <img src="assets/photos/pelleteusearnaque.png" class="tractopelle">
+        </div>
+        </div>
+
+
+    </div>
+</div>
+<div class="separateur_carte">
+</div>
+
+<div class="carte_commerce">
+    <input type="hidden" class="tags" value="prêt-à-porter, livraison, enfant, Agen">
+    <div class="photo_commerce" id="six" role="img" alt="Photographie présentant une multitude de vêtements dans un rayon du magaisn.">
+        
+    </div>
+    <div class="data_commerce">
+        <div class="statut_ouverture">
+            <div class="pastille"></div>
+            <span class="label_pastille">Ouvert</span>
+        </div>
+        <p class="titre_commerce">Bo & Co</p>
+        <p class="desc_commerce">Boutique où vous trouverez  des vêtements pour enfant et bébé, dans un style classique et coloré. </p>
+        <div class="tableContainer">
+            <table class="tags_carte">
+                <tr>
+                    <td>prêt-à-porter</td>
+                    <td>livraison</td>
+                </tr>
+                <tr>
+                    <td>enfant</td>
+                    <td>Agen</td>
+                </tr>
+            </table>
+        </div>
+        <button id="btnDecouvrir" class="bouton_decouvrir">Découvrir</button>
+        <div id="overlay" class="overlay">
+            <div id="popup" class="popup">
+            <h2>
+            En cours de programmation. 
+            <span id="btnClose" class="btnClose">&times;</span>
+            </h2>
+            <div>
+            Bravo pour être arrivé jusqu'ici ! Malheureusement, c'est encore en construction.
+            </div>
+            <img src="assets/photos/pelleteusearnaque.png" class="tractopelle">
+        </div>
+        </div>
+
+    </div>
+</div>
+<div class="separateur_carte">
+</div>
+
+<div class="carte_commerce">
+    <input type="hidden" class="tags" value="brocante, click&collect, friperie, Metz">
+    <div class="photo_commerce" id="seven" role="img" alt="Photographie mettant en avant de nombreux produits : vêtements, maroquinerie, accessoires, ...">
+</div>
+<div class="data_commerce">
+    <div class="statut_ouverture">
+        <div class="pastille"></div>
+        <span class="label_pastille">Ouvert</span>
+    </div>
+    <p class="titre_commerce">Brendy Concept Store</p>
+    <p class="desc_commerce">Boutique 100% locale, qui sait mélanger entre vintage, neuf et écorésponsable. </p>
+    <div class="tableContainer">
+        <table class="tags_carte">
+            <tr>
+                <td>brocante</td>
+                <td>click&collect</td>
+            </tr>
+            <tr>
+                <td>friperie</td>
+                <td>Metz</td>
+            </tr>
+        </table>
+    </div>
+  <button id="btnDecouvrir" class="bouton_decouvrir">Découvrir</button>
+        <div id="overlay" class="overlay">
+            <div id="popup" class="popup">
+            <h2>
+            En cours de programmation. 
+            <span id="btnClose" class="btnClose">&times;</span>
+            </h2>
+            <div>
+            Bravo pour être arrivé jusqu'ici ! Malheureusement, c'est encore en construction.
+            </div>
+            <img src="assets/photos/pelleteusearnaque.png" class="tractopelle">
+        </div>
+        </div>
+
+</div>
+</div>
+<div class="separateur_carte">
+</div>
+
+<div class="carte_commerce">
+    <input type="hidden" class="tags" value="coiffeur, vente de produits, naturel, Bordeaux">
+    <div class="photo_commerce" id="eight" role="img" alt="Photographie de l'intérieur d'un salon de coiffure avec des murs en thème de briques. Nous pouvons voir des miroirs ainsi que des sièges pour les clients.">
+</div>
+<div class="data_commerce">
+    <div class="statut_ouverture">
+        <div class="pastille"></div>
+        <span class="label_pastille">Ouvert</span>
+    </div>
+    <p class="titre_commerce">Guest Coiffeur</p>
+    <p class="desc_commerce">Ambiance chaleureuse, professionnalisme rigoureux basé sur une solide expérience, tels sont les atouts de Guest Coiffeur.</p>
+    <div class="tableContainer">
+        <table class="tags_carte">
+            <tr>
+                <td>coiffeur</td>
+                <td>vente de produits</td>
+            </tr>
+            <tr>
+                <td>naturel</td>
+                <td>Bordeaux</td>
+            </tr>
+        </table>
+    </div>
+  <button id="btnDecouvrir" class="bouton_decouvrir">Découvrir</button>
+        <div id="overlay" class="overlay">
+            <div id="popup" class="popup">
+            <h2>
+            En cours de programmation. 
+            <span id="btnClose" class="btnClose">&times;</span>
+            </h2>
+            <div>
+            Bravo pour être arrivé jusqu'ici ! Malheureusement, c'est encore en construction.
+            </div>
+            <img src="assets/photos/pelleteusearnaque.png" class="tractopelle">
+        </div>
+        </div>
+        
+</div>
+</div>
+
+        
+    </div>
+
+    <div id="formDiv" class="contentDiv">
+    <h2 class="txtBleu txtCenter txtBold">Référencez un commerce</h2>
+    <p class="txtBleu txtLight" id="champsObligatoires">Les champs marqués d’un * sont obligatoires.</p>
+    <p class="txtBleu txtLight">Parlez-nous de ce commerce :</p>
+    <div class="inputDiv txtSize">
+        <label for="inputName">*Quel est son nom ?</label>
+        <input type="text" class="inputs" id="inputName">
+    </div>
+    <div class="colSpace"></div>
+    <div class="inputDiv">
+        <label for="inputTel">Quel est le numéro de téléphone ?</label>
+        <input type="text" class="inputs" id="inputTel">
+    </div>
+    <div class="colSpace"></div>
+    <div class="inputDiv">
+        <label for="inputAdresse">*Où se trouve ce commerce ?</label>
+        <input type="text" class="inputs" id="inputAdresse">
+    </div>
+    <div class="colSpace"></div>
+    <div class="inputDiv">
+        <label for="inputWeb" class="txtSize">Le commerce dispose t’il d’un site web ?</label>
+        <input type="text" class="inputs" id="inputWeb">
+    </div>
+
+
+    <div class="colSpace"></div>
+    <div class="inputDiv">
+        <label for="inputDesc" class="txtSize">*Décrivez-nous brièvement ce commerce :</label>
+        <div id="charNum">(240 caractères max.)</div>
+        <div class="colSpaceMini"></div>
+        <textarea id="inputDesc" maxlength=241 onkeyup="countChar(this)" id="inputDesc"></textarea>
+    </div>
+
+    <div class="colSpaceMini"></div>
+
+    <p class="txtBleu txtLight txtSize">Donnez-nous quelques autres informations :</p>
+    
+    <label class="txtBold txtBleu txtSizeMini">Déposez trois photos au maximum :</label>
+    <div class="txtLight txtBleu">Formats acceptés : JPG, PNG (10Mo max.)</div>
+    <div class="colSpaceMini"></div>
+    <div class="uploads">
+        <div class="upload">
+            <input type="file" id="upload1">
+            <div class="overlayUpload">
+                <img src="assets/icons/upload.svg">
+            </div>
+        </div>
+        <div class="upload" onclick="">
+            <input type="file" id="upload2">
+            <div class="overlayUpload">
+                <img src="assets/icons/upload.svg">
+            </div>
+        </div>
+        <div class="upload" onclick="">
+            <input type="file" id="upload3">
+            <div class="overlayUpload">
+                <img src="assets/icons/upload.svg">
+            </div>
+        </div>
+    </div>
+
+    <div class="colSpace"></div>
+    <!-- réseaux -->
+
+    <div class="colSpace"></div>
+
+    <div id="mots-cles">
+        <p id="entrez_mots-cles">Entrez les mots-clés qui correspondent le plus au commerce :</p>
+        <div id="inputDiv_mots-cles">
+            <input type="text" id="input_mots-cles" class="inputs">
+            <button id="add_mots-cles">
+                <img src="assets/icons/add.svg">
+            </button>
+        </div>
+        <div id="liste_mots-cles">
+            <div id="ref_case_mot" class="case_mot">
+                <a href="#">x</a>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="colSpace"></div>
+
+    <div id="horaires">
+        <p id="demande_horaires">*Horaires d’ouverture :</p>
+        <div id="barre_jours">
+            <p class="barre_jour jour_selected">Lundi</p>
+            <p class="barre_jour">Mardi</p>
+            <p class="barre_jour">Mercredi</p>
+            <p class="barre_jour">Jeudi</p>
+            <p class="barre_jour">Vendredi</p>
+            <p class="barre_jour">Samedi</p>
+            <p class="barre_jour">Dimanche</p>
+        </div>
+        <table id="inputDivHoraires">
+            <tr class="inputHorairesLigne">
+                <td><p>Matin</p></td>
+                <td>
+                    <input class="inputs inputHoraire" id="matinLundi1">
+                    <input class="inputs inputHoraire" id="matinMardi1">
+                    <input class="inputs inputHoraire" id="matinMercredi1">
+                    <input class="inputs inputHoraire" id="matinJeudi1">
+                    <input class="inputs inputHoraire" id="matinVendredi1">
+                    <input class="inputs inputHoraire" id="matinSamedi1">
+                    <input class="inputs inputHoraire" id="matinDimanche1">
+                </td>
+                <td>
+                    <input class="inputs inputHoraire" id="matinLundi2">
+                    <input class="inputs inputHoraire" id="matinMardi2">
+                    <input class="inputs inputHoraire" id="matinMercredi2">
+                    <input class="inputs inputHoraire" id="matinJeudi2">
+                    <input class="inputs inputHoraire" id="matinVendredi2">
+                    <input class="inputs inputHoraire" id="matinSamedi2">
+                    <input class="inputs inputHoraire" id="matinDimanche2">
+                </td>
+            </div>
+            <tr class="inputHorairesLigne">
+                <td><p>Après-midi</p></td>
+                <td>
+                    <input class="inputs inputHoraire" id="apremLundi1">
+                    <input class="inputs inputHoraire" id="apremMardi1">
+                    <input class="inputs inputHoraire" id="apremMercredi1">
+                    <input class="inputs inputHoraire" id="apremJeudi1">
+                    <input class="inputs inputHoraire" id="apremVendredi1">
+                    <input class="inputs inputHoraire" id="apremSamedi1">
+                    <input class="inputs inputHoraire" id="apremDimanche1">
+                </td>
+                <td>
+                    <input class="inputs inputHoraire" id="apremLundi2">
+                    <input class="inputs inputHoraire" id="apremMardi2">
+                    <input class="inputs inputHoraire" id="apremMercredi2">
+                    <input class="inputs inputHoraire" id="apremJeudi2">
+                    <input class="inputs inputHoraire" id="apremVendredi2">
+                    <input class="inputs inputHoraire" id="apremSamedi2">
+                    <input class="inputs inputHoraire" id="apremDimanche2">
+                </td>
+            </div>
+        </table>
+        <button id="effacerJour" onclick="resetJour();">- Effacer ce jour</button>
+    </div>
+
+    <div class="colSpace"></div>
+
+    <div class="separateur_carte">
+    </div>
+
+    <div class="colSpace"></div>
+
+    <button id="boutonRef">Référencer</button>
+
+    <div class="colSpace"></div>
+
+
+    <div class='bloc'>
+        <p class="txtblanc txtBold txtSiz txtgauche txtprog"><span class="progressiontext"></span></p>
+        
+
+        <div class="bar">
+            <div class="percentage has-tip">
+        </div>
+    </div>
+</div>
+    
+</div>
+
+    <div id="MCookies" class="cookies">
+    <p>En continuant d’utiliser notre site, vous acceptez que nous utilisions les cookies conformément à notre <span>Politiques des cookies</span>.</p>
+    <button id="BCookies">Accepter</button>
+</div>
+    <script src="/assets/js/btnrech.js"></script>
+    <script src="/assets/js/btnplus.js"></script>
+    <script src="/assets/js/recherche.js"></script>
+    <script src="/assets/js/cookies.js"></script>
+    <script src="/assets/js/formulaire.js"></script>
+    <script src="/assets/js/carte_commerce.js"></script>
+  </body>
+  
+</html>
