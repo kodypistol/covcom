@@ -53,4 +53,8 @@ $inputH: 30px;
     color: $blanc;
     height: $tagRechercheH;
     box-shadow: $tagRechercheH/10 $tagRechercheH/10 $tagRechercheH/5 #00102b, $tagRechercheH/10*-1 $tagRechercheH/10*-1 $tagRechercheH/5 #0042ab;
+    &:active {
+        background-color: $jaune;
+        color: $bleu;
+    }
 }
