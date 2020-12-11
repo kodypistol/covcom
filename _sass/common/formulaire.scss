@@ -26,6 +26,13 @@
     height: 30px;
 }
 
+.txtreseau{
+    font-size: 2.5vh;
+    color: $bleu;
+    font-family: Goldplay-Alt-Bold;
+    margin-bottom: 20px;
+}
+
 $vitesseForm: 0.3s;
 
 #formDiv {
@@ -40,6 +47,14 @@ $vitesseForm: 0.3s;
     }
 }
 
+.reseaudiv{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    
+}
+
 .inputDiv {
     label {
         font-size: 2.3vh;
@@ -47,7 +62,7 @@ $vitesseForm: 0.3s;
         font-family: Goldplay-Alt-Bold;
     }
     input {
-        width: 90%;
+        width: 100%;
     }
 }
 
@@ -68,7 +83,7 @@ $vitesseForm: 0.3s;
     font-family: Goldplay-Alt-Regular;
     color: $bleu;
     padding-left: 20px;
-    padding-right: 30px;
+    padding-right: 20px;
     box-sizing: border-box;
     border: none;
     border-radius: 15px;
@@ -77,16 +92,22 @@ $vitesseForm: 0.3s;
     box-shadow: inset 5px 5px 10px #cccccf, inset -5px -5px 10px #ffffff;
 }
 
+.inputsRes{
+    width: 70%;
+    margin-left: 20px;
+}
+
 #inputDesc{
     @extend .inputs;
     padding: 20px 20px;
     height: 90px;
-    width: 88%;
+    width: 100%;
     resize: none;
     border: 0px;
     border-radius: 20px;
     background-color: #F0F0F3;
     box-shadow: inset 5px 5px 10px #cccccf, inset -5px -5px 10px #ffffff;
+
 
 }
 
