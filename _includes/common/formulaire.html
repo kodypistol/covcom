@@ -63,7 +63,7 @@
     <!-- réseaux -->
 
     <div>
-        <div class="txtreseau" >Entrez les réseaux sociaux :</div>
+        <div class="txtreseau">Entrez les réseaux sociaux :</div>
 
         <div class="reseaudiv"><img src="assets/icons/facebook.svg">
             <input type="text" class="inputs inputsRes"></div>
@@ -107,7 +107,9 @@
         </div>
         <table id="inputDivHoraires">
             <tr class="inputHorairesLigne">
-                <td><p>Matin</p></td>
+                <td>
+                    <p>Matin</p>
+                </td>
                 <td>
                     <input class="inputs inputHoraire" id="matinLundi1">
                     <input class="inputs inputHoraire" id="matinMardi1">
@@ -126,49 +128,59 @@
                     <input class="inputs inputHoraire" id="matinSamedi2">
                     <input class="inputs inputHoraire" id="matinDimanche2">
                 </td>
-            </div>
-            <tr class="inputHorairesLigne">
-                <td><p>Après-midi</p></td>
-                <td>
-                    <input class="inputs inputHoraire" id="apremLundi1">
-                    <input class="inputs inputHoraire" id="apremMardi1">
-                    <input class="inputs inputHoraire" id="apremMercredi1">
-                    <input class="inputs inputHoraire" id="apremJeudi1">
-                    <input class="inputs inputHoraire" id="apremVendredi1">
-                    <input class="inputs inputHoraire" id="apremSamedi1">
-                    <input class="inputs inputHoraire" id="apremDimanche1">
-                </td>
-                <td>
-                    <input class="inputs inputHoraire" id="apremLundi2">
-                    <input class="inputs inputHoraire" id="apremMardi2">
-                    <input class="inputs inputHoraire" id="apremMercredi2">
-                    <input class="inputs inputHoraire" id="apremJeudi2">
-                    <input class="inputs inputHoraire" id="apremVendredi2">
-                    <input class="inputs inputHoraire" id="apremSamedi2">
-                    <input class="inputs inputHoraire" id="apremDimanche2">
-                </td>
-            </div>
-        </table>
-        <button id="effacerJour" onclick="resetJour();">- Effacer ce jour</button>
     </div>
+    <tr class="inputHorairesLigne">
+        <td>
+            <p>Après-midi</p>
+        </td>
+        <td>
+            <input class="inputs inputHoraire" id="apremLundi1">
+            <input class="inputs inputHoraire" id="apremMardi1">
+            <input class="inputs inputHoraire" id="apremMercredi1">
+            <input class="inputs inputHoraire" id="apremJeudi1">
+            <input class="inputs inputHoraire" id="apremVendredi1">
+            <input class="inputs inputHoraire" id="apremSamedi1">
+            <input class="inputs inputHoraire" id="apremDimanche1">
+        </td>
+        <td>
+            <input class="inputs inputHoraire" id="apremLundi2">
+            <input class="inputs inputHoraire" id="apremMardi2">
+            <input class="inputs inputHoraire" id="apremMercredi2">
+            <input class="inputs inputHoraire" id="apremJeudi2">
+            <input class="inputs inputHoraire" id="apremVendredi2">
+            <input class="inputs inputHoraire" id="apremSamedi2">
+            <input class="inputs inputHoraire" id="apremDimanche2">
+        </td>
+</div>
+</table>
+<button id="effacerJour" onclick="resetJour();">- Effacer ce jour</button>
+</div>
 
-    <div class="colSpace"></div>
+<div class="colSpace"></div>
 
-    <div class="separateur_carte">
+<div class="separateur_carte">
+</div>
+
+<div class="colSpace"></div>
+
+<button id="boutonRef">Référencer</button>
+<div id="overlay2" class="overlay">
+    <div id="popup" class="popup">
+        <h2>
+            Félicitations !
+            <span id="btnClose2" class="btnClose">&times;</span>
+        </h2>
+        <div>Merci à vous pour avoir inscrit ce commerce ! Il sera disponible dès que possible.</div>
     </div>
-
-    <div class="colSpace"></div>
-
-    <button id="boutonRef">Référencer</button>
-
-    <div class="colSpace"></div>
-
-    <div class='bloc'>
-        <p class="txtblanc txtBold txtSiz txtgauche txtprog"><span class="progressiontext"></span></p>
+</div>
 
 
-        <div class="bar">
-            <div class="percentage has-tip">
-            </div>
+<div class="colSpace"></div>
+
+<div class='bloc'>
+    <p class="txtblanc txtBold txtSiz txtgauche txtprog"><span class="progressiontext"></span></p>
+    <div class="bar">
+        <div class="percentage has-tip">
         </div>
     </div>
+</div>

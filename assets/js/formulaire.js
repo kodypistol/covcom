@@ -37,7 +37,7 @@ function checkProgression() {
     let coulg = false;
     // percentElement.style.background= #0B9710;
     console.log(percent)
-    if (percent > 80 && coulg === false) {
+    if (percent > 49 && coulg === false) {
         percentElement.classList.add('green');
         progresstext.innerText = "Vous avez bientot fini ! : " + Math.round(percent) + '%';
 
