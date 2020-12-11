@@ -55,7 +55,7 @@ $taille_pastille: 10px;
     position: relative;
     .tableContainer {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
     }
 }
 
@@ -106,10 +106,8 @@ $taille_pastille: 10px;
     font-size: 2.2vh;
     box-shadow:  5px 5px 10px #cccccf, -5px -5px 10px #ffffff;
     position: relative;
-    margin-top: 10%;
-    margin-left: 18%;
-    left: 30%;
-    transform: translate(-50%, -45%);
+    left: 50%;
+    transform: translateX(-50%);
 
 }
 

@@ -57,7 +57,12 @@ inputs.forEach(function (input) {
 });
 
 $(".overlayUpload").click(function(){
-    $(this).parent().children("input").click();
+    if($(this).children("img").attr("src") === "assets/icons/remove.svg"){
+        $(this).children("img").attr("src","assets/icons/upload.svg")
+        $(this).parent().children("input").val("");
+    }else{
+        $(this).parent().children("input").click();
+    }
 });
 
 $(".upload input").change(function(){
@@ -95,7 +100,6 @@ $(".barre_jour").click(function(){
     var newJour = $(this).text();
     $(".jour_selected").removeClass("jour_selected");
     $(this).addClass("jour_selected");
-    console.log(jourInputSelector(prevJour));
     $(jourInputSelector(prevJour)).hide();
     $(jourInputSelector(newJour)).show();
 });
